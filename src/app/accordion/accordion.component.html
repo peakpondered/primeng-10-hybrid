@@ -1,0 +1,27 @@
+<h1>p-accordion Issue</h1>
+This only happens when ivy is disabled<br/>
+<div>
+    The Header text does not show until the panel is clicked when the selected attribute is bound<br/>
+    <code>&lt;p-accordionTab [selected]="false"</code>
+</div>
+<p-accordion>
+    <p-accordionTab [selected]="false">
+      <ng-template pTemplate="header">
+        Header
+      </ng-template>
+        Body
+    </p-accordionTab>
+  </p-accordion>
+  <hr/>
+
+  <div>
+    Same issue with interpolation syntax <code ngNonBindable>selected="{{false}}"</code><br/>
+</div>
+  <p-accordion>
+    <p-accordionTab selected="{{false}}">
+      <ng-template pTemplate="header">
+        Header
+      </ng-template>
+        Body
+    </p-accordionTab>
+  </p-accordion>

@@ -1,0 +1,38 @@
+<h1>p-dropdown Issues</h1>
+<div>
+dropdown component not working using <code ng-non-bindable>[optionLabel]="optionLabel"</code><br/>
+All items in list shown as "empty"<br/>
+fails with ivy enabled<br/>
+works with ivy disabled
+</div>
+<p-dropdown
+  [options]="cities"  
+  [(ngModel)]="selectedCity1"
+  placeholder="Select a City"
+  [optionLabel]="optionLabel"
+></p-dropdown>
+<hr/>
+
+<div>
+  dropdown component not working using <code>[optionLabel]="'name'"</code><br/>
+  All items in list shown as "empty"<br/>
+  fails with ivy enabled<br/>
+  works with ivy disabled
+  </div>
+  <p-dropdown
+    [options]="cities"  
+    [(ngModel)]="selectedCity1"
+    placeholder="Select a City"
+    [optionLabel]="'name'"
+  ></p-dropdown>
+  <hr/>
+<div>
+  dropdown component working using interpolation <code ngNonBindable>optionLabel="{{optionLabel}}"</code><br/>
+  works with ivy enabled or disabled
+  </div>
+<p-dropdown
+  [options]="cities"  
+  [(ngModel)]="selectedCity1"
+  placeholder="Select a City"
+  optionLabel="{{optionLabel}}"
+></p-dropdown>
